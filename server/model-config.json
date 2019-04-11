@@ -39,5 +39,13 @@
   "Profil": {
     "dataSource": "mongo",
     "public": true
+  },
+  "Event": {
+    "dataSource": "mongo",
+    "public": true
+  },
+  "Category": {
+    "dataSource": "mongo",
+    "public": true
   }
 }
