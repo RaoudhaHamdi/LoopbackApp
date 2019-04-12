@@ -21,7 +21,7 @@
     "categoryOfEvent": {
       "type":"belongsTo",
       "model":"Category",
-      "foreignKey":""
+      "foreignKey":"categoryId"
     }
   },
   "acls": [
@@ -32,17 +32,10 @@
       "permission": "DENY"
     },
     {
-      "accessType": "*",
+      "accessType": "EXECUTE",
       "principalType": "ROLE",
       "principalId": "admin",
       "permission": "ALLOW"
-    },
-    {
-      "accessType": "EXECUTE",
-      "principalType": "ROLE",
-      "principalId": "$authenticated",
-      "permission": "ALLOW",
-      "property": "READ"
     }
   ],
   "methods": {}
