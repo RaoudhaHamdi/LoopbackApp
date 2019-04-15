@@ -19,9 +19,17 @@
   "validations": [],
   "relations": {
     "categoryOfEvent": {
-      "type":"belongsTo",
-      "model":"Category",
-      "foreignKey":"categoryId"
+      "type": "belongsTo",
+      "model": "Category",
+      "foreignKey": "categoryId"
+    },
+    "eventProfils": {
+      "type": "hasMany",
+      "model": "Profil",
+      "through":"Part",
+      "foreignKey": "profilId",
+      "keyThrough": "eventId"
+      
     }
   },
   "acls": [
@@ -36,7 +44,15 @@
       "principalType": "ROLE",
       "principalId": "admin",
       "permission": "ALLOW"
+    },
+    {
+      "accessType": "*",
+      "principalType": "ROLE",
+      "principalId": "admin",
+      "permission": "ALLOW",
+      "property":"getEventsProfil"
     }
+    
   ],
   "methods": {}
 }

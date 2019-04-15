@@ -15,10 +15,13 @@
   },
   "validations": [],
   "relations": {
-    "events": {
+    "profilEvents": {
       "type": "hasMany",
       "model": "Event",
-      "foreignKey": "profilId"
+      "through":"Part",
+      "foreignKey": "eventId",
+      "keyThrough": "profilId"
+      
     }
   },
   "acls": [
@@ -47,6 +50,13 @@
       "principalId": "$everyone",
       "permission": "ALLOW",
       "property": "LOGIN"
+    },
+    {
+      "accessType": "EXECUTE",
+      "principalType": "ROLE",
+      "principalId": "admin",
+      "permission": "ALLOW",
+      "property":"getProfilsEvent"
     }
   ],
   "methods": {}

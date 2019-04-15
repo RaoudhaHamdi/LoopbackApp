@@ -47,5 +47,9 @@
   "Category": {
     "dataSource": "mongo",
     "public": true
+  },
+  "Part": {
+    "dataSource": "mongo",
+    "public": true
   }
 }

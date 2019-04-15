@@ -15,7 +15,11 @@
   },
   "validations": [],
   "relations": {
-   
+    "eventsCategory":{
+      "type":"hasMany",
+      "model":"Event",
+      "foreignkey":"eventId"
+    }
   },
   "acls": [
     {
